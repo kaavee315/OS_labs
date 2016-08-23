@@ -1,0 +1,102 @@
+init-+-ModemManager---2*[{ModemManager}]
+     |-NetworkManager-+-dhclient
+     |                |-dnsmasq
+     |                `-3*[{NetworkManager}]
+     |-accounts-daemon---2*[{accounts-daemon}]
+     |-acpid
+     |-avahi-daemon---avahi-daemon
+     |-bluetoothd
+     |-colord---2*[{colord}]
+     |-cron
+     |-cups-browsed
+     |-cupsd---dbus
+     |-dbus-daemon
+     |-6*[getty]
+     |-gnome-keyring-d---6*[{gnome-keyring-d}]
+     |-irqbalance
+     |-kerneloops
+     |-lightdm-+-Xorg---{Xorg}
+     |         |-lightdm-+-init-+-at-spi-bus-laun-+-dbus-daemon
+     |         |         |      |                 `-3*[{at-spi-bus-laun}]
+     |         |         |      |-at-spi2-registr---{at-spi2-registr}
+     |         |         |      |-bamfdaemon---3*[{bamfdaemon}]
+     |         |         |      |-dbus-daemon
+     |         |         |      |-dconf-service---2*[{dconf-service}]
+     |         |         |      |-dropbox---72*[{dropbox}]
+     |         |         |      |-evolution-calen---4*[{evolution-calen}]
+     |         |         |      |-evolution-sourc---2*[{evolution-sourc}]
+     |         |         |      |-gconfd-2
+     |         |         |      |-geany-+-bash
+     |         |         |      |       |-gnome-pty-helpe
+     |         |         |      |       `-3*[{geany}]
+     |         |         |      |-gnome-session-+-compiz---7*[{compiz}]
+     |         |         |      |               |-deja-dup-monito---2*[{deja-dup-monito}]
+     |         |         |      |               |-nautilus---4*[{nautilus}]
+     |         |         |      |               |-nm-applet---3*[{nm-applet}]
+     |         |         |      |               |-polkit-gnome-au---2*[{polkit-gnome-au}]
+     |         |         |      |               |-telepathy-indic---2*[{telepathy-indic}]
+     |         |         |      |               |-unity-fallback----2*[{unity-fallback-}]
+     |         |         |      |               |-update-notifier---3*[{update-notifier}]
+     |         |         |      |               |-zeitgeist-datah---6*[{zeitgeist-datah}]
+     |         |         |      |               `-3*[{gnome-session}]
+     |         |         |      |-gnome-terminal-+-bash---pstree
+     |         |         |      |                |-gnome-pty-helpe
+     |         |         |      |                `-3*[{gnome-terminal}]
+     |         |         |      |-gvfs-afc-volume---2*[{gvfs-afc-volume}]
+     |         |         |      |-gvfs-gphoto2-vo---{gvfs-gphoto2-vo}
+     |         |         |      |-gvfs-mtp-volume---{gvfs-mtp-volume}
+     |         |         |      |-gvfs-udisks2-vo---2*[{gvfs-udisks2-vo}]
+     |         |         |      |-gvfsd---{gvfsd}
+     |         |         |      |-gvfsd-burn---{gvfsd-burn}
+     |         |         |      |-gvfsd-fuse---4*[{gvfsd-fuse}]
+     |         |         |      |-gvfsd-metadata---{gvfsd-metadata}
+     |         |         |      |-gvfsd-trash---3*[{gvfsd-trash}]
+     |         |         |      |-hud-service---3*[{hud-service}]
+     |         |         |      |-ibus-daemon-+-ibus-dconf---3*[{ibus-dconf}]
+     |         |         |      |             |-ibus-engine-sim---2*[{ibus-engine-sim}]
+     |         |         |      |             |-ibus-ui-gtk3---3*[{ibus-ui-gtk3}]
+     |         |         |      |             `-2*[{ibus-daemon}]
+     |         |         |      |-ibus-x11---3*[{ibus-x11}]
+     |         |         |      |-indicator-appli---{indicator-appli}
+     |         |         |      |-indicator-bluet---2*[{indicator-bluet}]
+     |         |         |      |-indicator-datet---5*[{indicator-datet}]
+     |         |         |      |-indicator-keybo---2*[{indicator-keybo}]
+     |         |         |      |-indicator-messa---3*[{indicator-messa}]
+     |         |         |      |-indicator-power---2*[{indicator-power}]
+     |         |         |      |-indicator-print---2*[{indicator-print}]
+     |         |         |      |-indicator-sessi---2*[{indicator-sessi}]
+     |         |         |      |-indicator-sound---3*[{indicator-sound}]
+     |         |         |      |-kactivitymanage---10*[{kactivitymanage}]
+     |         |         |      |-kded4---3*[{kded4}]
+     |         |         |      |-kdeinit4---klauncher
+     |         |         |      |-knotify4---4*[{knotify4}]
+     |         |         |      |-mission-control---2*[{mission-control}]
+     |         |         |      |-notify-osd---2*[{notify-osd}]
+     |         |         |      |-2*[okular---3*[{okular}]]
+     |         |         |      |-oosplash-+-soffice.bin---7*[{soffice.bin}]
+     |         |         |      |          `-2*[{oosplash}]
+     |         |         |      |-pulseaudio---2*[{pulseaudio}]
+     |         |         |      |-unity-panel-ser---2*[{unity-panel-ser}]
+     |         |         |      |-unity-settings--+-syndaemon
+     |         |         |      |                 `-5*[{unity-settings-}]
+     |         |         |      |-2*[upstart-dbus-br]
+     |         |         |      |-upstart-event-b
+     |         |         |      |-upstart-file-br
+     |         |         |      |-window-stack-br
+     |         |         |      |-zeitgeist-daemo---{zeitgeist-daemo}
+     |         |         |      `-zeitgeist-fts-+-cat
+     |         |         |                      `-2*[{zeitgeist-fts}]
+     |         |         `-{lightdm}
+     |         `-2*[{lightdm}]
+     |-polkitd---2*[{polkitd}]
+     |-rsyslogd---3*[{rsyslogd}]
+     |-rtkit-daemon---2*[{rtkit-daemon}]
+     |-systemd-logind
+     |-systemd-udevd
+     |-udisksd---4*[{udisksd}]
+     |-upowerd---2*[{upowerd}]
+     |-upstart-file-br
+     |-upstart-socket-
+     |-upstart-udev-br
+     |-whoopsie---2*[{whoopsie}]
+     `-wpa_supplicant

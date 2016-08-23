@@ -1,0 +1,73 @@
+
+1. 
+	a)	Cores : 4 		(Can find the information in /proc/cpuinfo)
+	b)	MemTotal : 8146916 kB   
+		MemFree :         5950748 kB   (Can find the information in /proc/meminfo)
+	c)	Context Swithces : (ctxt) 4837013		(Can find the information in /proc/stat)
+	d)	Processes forked : 12615 (Same as total number of processes till now, as every process is forked from some other process, Can be found from /proc/stat)
+
+2.
+	a)	cpu1.c
+
+		The bottleneck resource is CPU
+
+		commands used - top
+		top shows nearly 100% CPU usage.
+		Number of voluntary switches in /proc/id/sched is zero.
+		iostat, /proc/id/io, iotop shows no I/O operations
+
+		Code explanation : There is no syscall in the code. Also there is no read/write from/to disk. Only performance improvement is possible with improvement in CPU performance.
+
+
+	b)	cpu1print.c
+
+		The bottleneck resource is I/O
+
+	 	commands used -top,proc/[terminal_pid]/io
+		top shows very less CPU usage, CPU is not used completely. The CPU usage of terminal process grew higher(than earlier, not 100%) on running cpuprint1.c.
+
+		Its the no. of writes, as the write speed is slow enough, so CPU needn't be used fully.
+		CPU usage if
+
+	c)	cpu2 - CPU(commands used - top)
+	
+		top gives nearly 100% CPU.
+	
+		There is no syscall, so CPU is fully used.
+
+	d)	disk - disk access(I/O)(commands used - top, iostat -dx 1)
+
+		top gives very less CPU
+	
+		Its the no. of disk accesses, as the due to large no of files, data not in main memory.
+		Also wspeed is high in iostat
+
+	e)	disk1 - CPU(top) 
+
+		top gives nearly 100% CPU.
+	
+		The code only uses one file, so all the data is in cache, so no syscalls.
+
+
+3.
+	program - usermode, kernel mode (The values correspond to after running the code for different time individually, found from /proc/pid/status)	
+	a)cpu1 - 13965, 0
+	b)cpu1print- 51,308
+	c)cpu2 - 2838,0
+		cpu1 has no syscalls or voluntary interrupts. Hence has very little or no time in kernel mode.
+		cpu1print has many syscalls. Thus has to spend more time in kernel mode.  
+		cpu2 has gettimeofday() which is a non blocking syscall, hence spends less time in kernel mode.
+
+
+4.
+	(found from /proc/pid/sched)
+	a) cpu1
+		Voluntary switches : 0
+		Involuntary switches : 2909 
+
+	b) disk
+		Voluntary switches : 6138
+		Involuntary switches : 419	
+
+	disk has mostly voluntary context switches as it has to read from different files in the disk everytime and has to use syscalls.
+	cpu1 has mainly voluntary switches and no involuntary switches as it has no syscalls

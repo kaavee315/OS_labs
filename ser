@@ -1,0 +1,137 @@
+// DISCLAIMER //compile using g++ compiler //$g++ server2.c -o server2
+#include <iostream>
+#include <map>
+#include <string>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/time.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+#include <sys/wait.h>
+#include <signal.h>
+#include <cstdlib>
+
+#define BACKLOG 10
+#define FILEREADSIZE 512
+#define MAX_INPUT_SIZE 150
+#define MAX_SIZE 64
+using namespace std;
+
+
+int sendall(int s, unsigned char *buf, int *len){     //reference : beej's guide
+    int total = 0;          // how many bytes we’ve sent
+    int bytesleft = *len;   // how many we have left to send
+    int n;
+    while(total < *len) {
+    n = send(s, buf+total, bytesleft, 0);
+    sleep(1);
+
+    if (n == -1) { break; }
+    total += n;
+    bytesleft -= n;
+    }
+    *len = total; // return number actually sent here
+    return n==-1?-1:0; // return -1 on failure, 0 on success
+}
+
+bool is_numeric(char *in) {
+	for(int i=0; i<strlen(in); i++) if(!(in[i] >= '0' && in[i] <= '9')) return false;
+	return true;
+}
+//Function to give appropriate response to client
+void handleRequest(int new_fd) {
+	int n;
+	char inputbuf[MAX_INPUT_SIZE];
+	bzero(inputbuf,MAX_INPUT_SIZE);
+	char server_msg[MAX_INPUT_SIZE];
+	bzero(server_msg,MAX_INPUT_SIZE);
+	n = recv(new_fd,inputbuf,(MAX_INPUT_SIZE-1),0);
+	if (n <= 0) {//check connection from that fd
+		fprintf(stderr, "ERROR reading from socket\n");
+		return;
+	}
+	if(inputbuf[0]=='g' && inputbuf[1]=='e' && inputbuf[2]=='t' && inputbuf[3]==' ') {
+		int i=4;
+        char fileName[20];
+        memset(fileName,'\0',sizeof(fileName));         //clearing garbage values, if any
+
+        while(!(inputbuf[i]=='\0') ){
+            fileName[i-4] = inputbuf[i++];
+        } 
+        //~ fileName[i-4] = '.';
+        //~ fileName[i-3] = 't';
+        //~ fileName[i-2] = 'x';
+        //~ fileName[i-1] = 't';
+        fileName[i-0] = '\0';
+        /* Open the file that we wish to transfer */
+        FILE *fp = fopen(fileName,"r");
+        // printf("\n file : %s",fileName);
+        if(fp==NULL) {
+            printf("File open error");
+            return;   
+        }   
+
+        /* Read data from file and send it */
+        while(1){
+            /* First read file in chunks of 256 bytes */
+            unsigned char buff[FILEREADSIZE]={0};
+            int nread = fread(buff,1,FILEREADSIZE,fp);
+            /* If read was success, send data. */
+            if(sendall(new_fd, buff, &nread) == -1) {
+				printf("Error sending file");
+				fclose( fp );
+				// printf("\n  closing fp \n");
+				return;
+			}
+            /*
+             * There is something tricky going on with read .. 
+             * Either there was error, or we reached end of file.
+             */
+            if (nread < FILEREADSIZE) {
+                if (feof(fp)) {
+                	write(new_fd, buff, 0 );
+                    //printf("End of file\n");
+            	}
+                if (ferror(fp))
+                    printf("Error reading\n");
+                break;
+            }
+        }
+	fclose( fp );
+    // printf("\n  closing fp \n");
+	}
+}
+
+int main(int argc, char *argv[]) {
+	//Check if correct number of arguments supplied and if arguments are integers
+	if(argc!=2 || !is_numeric(argv[1]) ) {
+		fprintf(stderr,"usage %s <server-port>\n", argv[0]);
+		return 1;
+	}
+	//We listen on sockfd and take care of the new connection on new_fd
+	int portNum = atoi(argv[1]);
+	int sockfd, new_fd,n; 
+	struct sockaddr_in my_addr; 
+	struct sockaddr_in client_addr; //client info
+	socklen_t sin_size;
+	// fd_set master,read_fds;
+	sockfd = socket(AF_INET, SOCK_STREAM, 0);
+	if (sockfd < 0) {
+		fprintf(stderr, "ERROR opening socket\n");
+		return 1;
+	}
+	//Filling in connection details
+	my_addr.sin_family = AF_INET;
+	my_addr.sin_port = htons(portNum);
+	my_addr.sin_addr.s_addr = INADDR_ANY;
+	memset(&(my_addr.sin_zero), '\0', 8);
+	//Binding the required socket
+	if(bind(sockfd, (struct sockaddr *)&my_addr, sizeof(my_addr)) < 0) {
+		printf("ERROR: bind failure \n");
+		Received SIGINT; downloaded 4096 bytes so far.

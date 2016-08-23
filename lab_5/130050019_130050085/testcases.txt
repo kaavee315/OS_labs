@@ -1,0 +1,429 @@
+Script started on Saturday 13 February 2016 08:25:34 PM IST
+]0;karan@karan-Inspiron-3521: ~/Dropbox/notesandbooks/OS_Labs/lab_5karan@karan-Inspiron-3521:~/Dropbox/notesandbooks/OS_Labs/lab_5$ make
+gcc termin.c -o shell
+termin.c: In function ‚Äòmain‚Äô:
+termin.c:69:7: warning: ‚Äògets‚Äô is deprecated (declared at /usr/include/stdio.h:638) [-Wdeprecated-declarations]
+       gets(line);           
+       ^
+/tmp/cc3557Cr.o: In function `main':
+termin.c:(.text+0x1d8): warning: the `gets' function is dangerous and should not be used.
+]0;karan@karan-Inspiron-3521: ~/Dropbox/notesandbooks/OS_Labs/lab_5karan@karan-Inspiron-3521:~/Dropbox/notesandbooks/OS_Labs/lab_5$ ./shell 
+Hello>ls
+a.out
+backu.c
+cat
+data
+files
+gadda
+get-one-file-sig
+karan
+keywords
+lab5_files.tgz
+lab5.pdf
+makefile
+make-tokens
+make-tokens_2.c
+make-tokens.c
+make-tokens.cpp
+make-tokens_karan.c
+make-tokens_karan (Sivaprasad Sudhir's conflicted copy 2016-01-31).c
+make-tokens_siva.c
+rand
+ser
+shell
+Temp
+termin
+termin.c
+termin_gadda.c
+termin_try2.c
+termin_try.c
+typescript
+Hello>cd Temp
+Hello>ls
+Gadda
+Hello>cd ..
+Hello>clear
+[H[2JHello>ls
+a.out
+backu.c
+cat
+data
+files
+gadda
+get-one-file-sig
+karan
+keywords
+lab5_files.tgz
+lab5.pdf
+makefile
+make-tokens
+make-tokens_2.c
+make-tokens.c
+make-tokens.cpp
+make-tokens_karan.c
+make-tokens_karan (Sivaprasad Sudhir's conflicted copy 2016-01-31).c
+make-tokens_siva.c
+rand
+ser
+shell
+Temp
+termin
+termin.c
+termin_gadda.c
+termin_try2.c
+termin_try.c
+typescript
+Hello>cat make      rand
+wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,†@Received SIGINT; downloaded 1024 bytes so far.
+Hello>ls -l
+total 444
+-rwxrwxr-x 1 karan karan 18214 Feb 11 11:44 a.out
+-rw-rw-r-- 1 karan karan  8772 Feb  8 14:40 backu.c
+-rw-rw-r-- 1 karan karan    24 Feb  6 14:02 cat
+-rw-rw-r-- 1 karan karan     9 Jan 31 17:34 data
+-rw-rw-r-- 1 karan karan    19 Feb 13 20:07 files
+-rw-rw-r-- 1 karan karan  8406 Jan 31 17:28 gadda
+-rwxrwxr-x 1 karan karan 13689 Jan 30 15:48 get-one-file-sig
+-rw-rw-r-- 1 karan karan    14 Feb 12 16:21 karan
+-rw-rw-r-- 1 karan karan   114 Jan 31 17:29 keywords
+-rw-rw-r-- 1 karan karan   752 Jan 30 11:34 lab5_files.tgz
+-rw-rw-r-- 1 karan karan 86331 Jan 30 11:34 lab5.pdf
+-rw-rw-r-- 1 karan karan    27 Feb 12 15:07 makefile
+-rwxrwxr-x 1 karan karan 17808 Feb  6 13:41 make-tokens
+-rw-rw-r-- 1 karan karan  7744 Feb  6 13:41 make-tokens_2.c
+-rw-rw-r-- 1 karan karan  1482 Jan 31 14:07 make-tokens.c
+-rw-rw-r-- 1 karan karan  1528 Jan 31 14:00 make-tokens.cpp
+-rw-rw-r-- 1 karan karan  7726 Feb  1 16:40 make-tokens_karan.c
+-rw-rw-r-- 1 karan karan  4822 Jan 31 16:21 make-tokens_karan (Sivaprasad Sudhir's conflicted copy 2016-01-31).c
+-rw-rw-r-- 1 karan karan  1482 Jan 31 14:04 make-tokens_siva.c
+-rw-rw-r-- 1 karan karan  1074 Feb 13 20:20 rand
+-rw-rw-r-- 1 karan karan  4143 Feb 11 11:46 ser
+-rwxrwxr-x 1 karan karan 18201 Feb 13 20:25 shell
+drwxrwxr-x 3 karan karan  4096 Jan 31 14:13 Temp
+-rwxrwxr-x 1 karan karan 17801 Feb  6 13:58 termin
+-rw-rw-r-- 1 karan karan  7645 Feb 13 20:24 termin.c
+-rw-rw-r-- 1 karan karan 10777 Feb 11 11:44 termin_gadda.c
+-rw-rw-r-- 1 karan karan  7973 Feb 13 16:11 termin_try2.c
+-rw-rw-r-- 1 karan karan  7999 Feb 13 19:04 termin_try.c
+-rw-rw-r-- 1 karan karan     0 Feb 13 20:25 typescript
+Hello>rurur
+Command not Found
+Hello>cd    ls 
+a.out
+backu.c
+cat
+data
+files
+gadda
+get-one-file-sig
+karan
+keywords
+lab5_files.tgz
+lab5.pdf
+makefile
+make-tokens
+make-tokens_2.c
+make-tokens.c
+make-tokens.cpp
+make-tokens_karan.c
+make-tokens_karan (Sivaprasad Sudhir's conflicted copy 2016-01-31).c
+make-tokens_siva.c
+rand
+ser
+shell
+Temp
+termin
+termin.c
+termin_gadda.c
+termin_try2.c
+termin_try.c
+typescript
+Hello>ls -l
+total 448
+-rwxrwxr-x 1 karan karan 18214 Feb 11 11:44 a.out
+-rw-rw-r-- 1 karan karan  8772 Feb  8 14:40 backu.c
+-rw-rw-r-- 1 karan karan    24 Feb  6 14:02 cat
+-rw-rw-r-- 1 karan karan     9 Jan 31 17:34 data
+-rw-rw-r-- 1 karan karan    19 Feb 13 20:07 files
+-rw-rw-r-- 1 karan karan  8406 Jan 31 17:28 gadda
+-rwxrwxr-x 1 karan karan 13689 Jan 30 15:48 get-one-file-sig
+-rw-rw-r-- 1 karan karan    14 Feb 12 16:21 karan
+-rw-rw-r-- 1 karan karan   114 Jan 31 17:29 keywords
+-rw-rw-r-- 1 karan karan   752 Jan 30 11:34 lab5_files.tgz
+-rw-rw-r-- 1 karan karan 86331 Jan 30 11:34 lab5.pdf
+-rw-rw-r-- 1 karan karan    27 Feb 12 15:07 makefile
+-rwxrwxr-x 1 karan karan 17808 Feb  6 13:41 make-tokens
+-rw-rw-r-- 1 karan karan  7744 Feb  6 13:41 make-tokens_2.c
+-rw-rw-r-- 1 karan karan  1482 Jan 31 14:07 make-tokens.c
+-rw-rw-r-- 1 karan karan  1528 Jan 31 14:00 make-tokens.cpp
+-rw-rw-r-- 1 karan karan  7726 Feb  1 16:40 make-tokens_karan.c
+-rw-rw-r-- 1 karan karan  4822 Jan 31 16:21 make-tokens_karan (Sivaprasad Sudhir's conflicted copy 2016-01-31).c
+-rw-rw-r-- 1 karan karan  1482 Jan 31 14:04 make-tokens_siva.c
+-rw-rw-r-- 1 karan karan  1074 Feb 13 20:20 rand
+-rw-rw-r-- 1 karan karan  4143 Feb 11 11:46 ser
+-rwxrwxr-x 1 karan karan 18201 Feb 13 20:25 shell
+drwxrwxr-x 3 karan karan  4096 Jan 31 14:13 Temp
+-rwxrwxr-x 1 karan karan 17801 Feb  6 13:58 termin
+-rw-rw-r-- 1 karan karan  7645 Feb 13 20:24 termin.c
+-rw-rw-r-- 1 karan karan 10777 Feb 11 11:44 termin_gadda.c
+-rw-rw-r-- 1 karan karan  7973 Feb 13 16:11 termin_try2.c
+-rw-rw-r-- 1 karan karan  7999 Feb 13 19:04 termin_try.c
+-rw-rw-r-- 1 karan karan  4096 Feb 13 20:26 typescript
+Hello>cd Te	mp
+Hello>;ls
+Command not Found
+Hello>ls
+Gadda
+Hello>cd ..
+Hello>ls
+a.out
+backu.c
+cat
+data
+files
+gadda
+get-one-file-sig
+karan
+keywords
+lab5_files.tgz
+lab5.pdf
+makefile
+make-tokens
+make-tokens_2.c
+make-tokens.c
+make-tokens.cpp
+make-tokens_karan.c
+make-tokens_karan (Sivaprasad Sudhir's conflicted copy 2016-01-31).c
+make-tokens_siva.c
+rand
+ser
+shell
+Temp
+termin
+termin.c
+termin_gadda.c
+termin_try2.c
+termin_try.c
+typescript
+Hello>cd dir1 dir2
+Format cd <directory> 
+Hello>sere ver 127.0.0.1 5000    
+error:Expected input : server server_IP server_port 
+Hello>server 127\ .0.. 0.1 5000
+Hello>getfl files/foo1.txt
+Rathi is an assholeHello>getfl
+Format : getfl filename
+Hello>getfl files/foo.txt
+Hello>getfl fileds  s/foo0.txt > out
+Hello>cat out
+Gadda is an assholeHello>get  fl files/foo2.txt | grep 1
+Hello>getfl files/foo2.txt | grep @
+DHNH'4BZ, wrexyck[,†@;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcgvF†@
+DHNH'4BZ†@, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexyck†@[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etrcg†@vF
+DHNH'4†@BZ, wrexyck[,;]etrcgvF
+DHNH'4BZ, wrexy†@ck[,;]etrcgvF
+DHNH'4BZ, wrexyck[,;]etr†@cgvF
+Hello>getsq fieles    ls es/foo2.txt files/foo1.txt
+Hello>getsq files/foo2.txt files/foo1.txt files/foo3.txt
+^CReceived SIGINT; downloaded 2048 bytes so far.
+Hello>getpl files/foo0.  3.txt files/foo4.txt files/foo2.txt files/foo4.txt
+^CReceived SIGINT; downloaded 3072 bytes so far.
+Received SIGINT; downloaded 3072 bytes so far.
+Received SIGINT; downloaded 3072 bytes so far.
+Received SIGINT; downloaded 3072 bytes so far.
+Hello>getbg files/foo0.txt
+Hello>ls
+a.out
+backu.c
+cat
+data
+files
+gadda
+get-one-file-sig
+karan
+keywords
+lab5_files.tgz
+lab5.pdf
+makefile
+make-tokens
+make-tokens_2.c
+make-tokens.c
+make-tokens.cpp
+make-tokens_karan.c
+make-tokens_karan (Sivaprasad Sudhir's conflicted copy 2016-01-31).c
+make-tokens_siva.c
+out
+rand
+ser
+shell
+Temp
+termin
+termin.c
+termin_gadda.c
+termin_try2.c
+termin_try.c
+typescript
+Hello>ls
+a.out
+backu.c
+cat
+data
+files
+gadda
+get-one-file-sig
+karan
+keywords
+lab5_files.tgz
+lab5.pdf
+makefile
+make-tokens
+make-tokens_2.c
+make-tokens.c
+make-tokens.cpp
+make-tokens_karan.c
+make-tokens_karan (Sivaprasad Sudhir's conflicted copy 2016-01-31).c
+make-tokens_siva.c
+out
+rand
+ser
+shell
+Temp
+termin
+termin.c
+termin_gadda.c
+termin_try2.c
+termin_try.c
+typescript
+Background process reaped off with status 0 
+Hello>gegetbf     tbg files/foo4.  2.txt
+Hello>^C
+Hello>ls
+a.out
+backu.c
+cat
+data
+files
+gadda
+get-one-file-sig
+karan
+keywords
+lab5_files.tgz
+lab5.pdf
+makefile
+make-tokens
+make-tokens_2.c
+make-tokens.c
+make-tokens.cpp
+make-tokens_karan.c
+make-tokens_karan (Sivaprasad Sudhir's conflicted copy 2016-01-31).c
+make-tokens_siva.c
+out
+rand
+ser
+shell
+Temp
+termin
+termin.c
+termin_gadda.c
+termin_try2.c
+termin_try.c
+typescript
+Hello>getfl files/foo1.txt
+^CRathi is an assholeReceived SIGINT; downloaded 19 bytes so far.
+Background process reaped off with status 0 
+Hello>echo 1
+1
+Hello>exit
+]0;karan@karan-Inspiron-3521: ~/Dropbox/notesandbooks/OS_Labs/lab_5karan@karan-Inspiron-3521:~/Dropbox/notesandbooks/OS_Labs/lab_5$ cat typescript  [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1@s[1@ub typescript  [A]0;karan@karan-Inspiron-3521: ~/Dropbox/notesandbooks/OS_Labs/lab_5karan@karan-Inspiron-3521:~/Dropbox/notesandbooks/OS_Labs/lab_5$ [C[C[Cl typescript  [A]0;karan@karan-Inspiron-3521: ~/Dropbox/notesandbooks/OS_Labs/lab_5karan@karan-Inspiron-3521:~/Dropbox/notesandbooks/OS_Labs/lab_5$ [C[C[C[C
+
+]0;karan@karan-Inspiron-3521: ~/Dropbox/notesandbooks/OS_Labs/lab_5karan@karan-Inspiron-3521:~/Dropbox/notesandbooks/OS_Labs/lab_5$ man script
+[?1049h[?1h=SCRIPT(1)                        User Commands                       SCRIPT(1)[m
+[m
+[1mNAME[0m[m
+     [1mscript[0m ‚Äî make typescript of terminal session[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mscript[0m [[1m-a[0m] [[1m-c[0m [4mcommand[24m] [[1m-e[0m] [[1m-f[0m] [[1m-q[0m] [[1m-t[0m[=[4mfile[24m]] [[1m-V[0m] [[1m-h[0m] [[4mfile[24m][m
+[m
+[1mDESCRIPTION[0m[m
+     [1mscript[0m makes a typescript of everything printed on your terminal.  It is[m
+     useful for students who need a hardcopy record of an interactive session[m
+     as proof of an assignment, as the typescript file can be printed out[m
+     later with lpr(1).[m
+[m
+     If the argument [4mfile[24m is given, [1mscript[0m saves all dialogue in [4mfile[24m.  If no[m
+     file name is given, the typescript is saved in the file [4mtypescript[24m.[m
+[m
+     Options:[m
+[m
+     [1m-a,[0m [1m--append[0m[m
+             Append the output to [4mfile[24m or [4mtypescript[24m, retaining the prior con‚Äê[m
+             tents.[m
+[m
+[7m Manual page script(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-c,[0m [1m--command[0m [4mcommand[24m[m
+[7m Manual page script(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Run the [4mcommand[24m rather than an interactive shell.  This makes it[m
+[7m Manual page script(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             easy for a script to capture the output of a program that behaves[m
+[7m Manual page script(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             differently when its stdout is not a tty.[m
+[7m Manual page script(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page script(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-e,[0m [1m--return[0m[m
+[7m Manual page script(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Return the exit code of the child process.  Uses the same format[m
+[7m Manual page script(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             as bash termination on signal termination exit code is 128+n.[m
+[7m Manual page script(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page script(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-f,[0m [1m--flush[0m[m
+[7m Manual page script(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Flush output after each write.  This is nice for telecooperation:[m
+[7m Manual page script(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             one person does `mkfifo foo; script -f foo', and another can[m
+[7m Manual page script(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             supervise real-time what is being done using `cat foo'.[m
+[7m Manual page script(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page script(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m--force[0m[m
+[7m Manual page script(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             Allow the default output destination, i.e. the typescript file,[m
+[7m Manual page script(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             to be a hard or symbolic link.  The command will follow a sym‚Äê[m
+[7m Manual page script(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K             bolic link.[m
+[7m Manual page script(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     Options:[m
+[24;1H[K[7m Manual page script(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[24;1H[K[7m Manual page script(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     file name is given, the typescript is saved in the file [4mtypescript[24m.[m
+[24;1H[K[7m Manual page script(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     If the argument [4mfile[24m is given, [1mscript[0m saves all dialogue in [4mfile[24m.  If no[m
+[24;1H[K[7m Manual page script(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[24;1H[K[7m Manual page script(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     later with lpr(1).[m
+[24;1H[K[7m Manual page script(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     as proof of an assignment, as the typescript file can be printed out[m
+[24;1H[K[7m Manual page script(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     useful for students who need a hardcopy record of an interactive session[m
+[24;1H[K[7m Manual page script(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM     [1mscript[0m makes a typescript of everything printed on your terminal.  It is[m
+[24;1H[K[7m Manual page script(1)

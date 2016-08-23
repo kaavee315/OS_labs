@@ -1,0 +1,6 @@
+chdir
+setpgid
+kill
+server 192.168.1.6 5000
+getsq files/foo2.txt files/foo1.txt
+getpl files/foo0.txt files/foo1.txt

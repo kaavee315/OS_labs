@@ -1,0 +1,43 @@
+OS LAB 4
+--------
+
+Karan Vaidya	130050019	
+Sivaprasad S 	130050085
+
+Exercises
+---------
+
+1.
+	The pid of the bash shell is 6488 
+	Command used : echo $BASHPID
+
+	The entire process tree is in tree.txt
+	That corresponding to bash shell is :
+	init(1) -> lightdm(1364) -> lightdm(1466) -> init(1727) -> gnome-terminal(6480) -> bash(6488) ;
+	Command used : pstree -p
+
+2.
+	Built in the code 	: history, cd
+	Exec'ed 			: ls, ps
+
+	"exec" replaces the current process image with a new process image.
+	On running "exec ls" and "exec ps" shell's process image is replaced and the current shell is no longer accessible after doing this. They are system programs, that needs to be exec'ed.
+	Where as for "exec history" and "exec cd" the commands have to be built into the shell, as the executable was not found and shell was able to continue to run after running them.
+
+3.	
+	The pid of the process is 11678 (found from top)
+
+	lrwx------ 1 karan karan 64 Jan 30 14:18 fd/0 -> /dev/pts/7
+	l-wx------ 1 karan karan 64 Jan 30 14:18 fd/1 -> /tmp/tmp.txt
+	lrwx------ 1 karan karan 64 Jan 30 14:18 fd/2 -> /dev/pts/7
+
+	fd 0 and fd points to the corresponding pseudo terminal (in memory).
+	fd 1 points to the file where it's redirected to.
+
+	I/O redirection is implemented in the shell by manipulating of the file descriptor table. 
+	To implement output redirection from a command, the shell forks a child process to implement the command, opens the file to write the output to, and “copies” the file descriptor information of the opened file into the file descriptor entry of the child’s standard output. Similarly for input redirection.
+
+4.	pid
+	lrwx------ 1 karan karan 64 Jan 30 14:32 fd/0 -> /dev/pts/7
+	l-wx------ 1 karan karan 64 Jan 30 14:22 fd/1 -> pipe:[231542]
+	lr-x------ 1 karan karan 64 Jan 30 14:22 ../11930/fd/0 -> pipe:[231542]
